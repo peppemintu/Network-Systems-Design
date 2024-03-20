@@ -1,0 +1,30 @@
+﻿@page
+@model SpaceTourismWebApp.Pages.DisplayModel
+@{
+    ViewData["Title"] = "Display";
+}
+@using System.Data
+
+<h1>Booked Tickets</h1>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">TicketId</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow row in Model.Tickets.Rows)
+        {
+            <tr>
+                <td>@row["Id"]</td>
+                <td>@row["CustomerName"]</td>
+                <td>@row["Email"]</td>
+                <td>@row["BookingDate"]</td>
+            </tr>
+        }
+    </tbody>
+</table>
