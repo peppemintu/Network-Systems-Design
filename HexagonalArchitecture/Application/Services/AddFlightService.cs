@@ -34,9 +34,6 @@ namespace SpaceFlightBookingApp.Application.Services
 
             // Добавление полета в базу данных
             _insertFlightPort.InsertFlight(flight);
-
-            // Вставка мест в базу данных
-            _insertFlightPort.InsertSeat();
         }
 
         public void AddSeatsToFlight(Flight flight, int economySeatsCount, int businessSeatsCount, int firstClassSeatsCount)
